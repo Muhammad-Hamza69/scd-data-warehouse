@@ -1,0 +1,46 @@
+In case of nifi errors/issues in the container, change to one of the following nifi image versions in docker-compose.yml file:
+
+1) apache/nifi:1.14.0
+2) apache/nifi:1.12.0
+3) pavansrivathsa/nifi
+
+chmod 400 "kp-scd-warehousing-mhs.pem" for read and write access
+ls | grep ".pem" is for pattern in bash linux
+
+ssh -i "kp-scd-warehousing-mhs.pem" ec2-user@ec2-54-205-190-33.compute-1.amazonaws.com
+
+ssh -i "kp-scd-warehousing-mhs.pem" ec2-user@ec2-54-205-190-33.compute-1.amazonaws.com
+
+ssh -i "kp-scd-warehousing-mhs.pem" ec2-user@ec2-54-205-190-33.compute-1.amazonaws.com -L 2081:localhost:2041 -L 4888:localhost:4888 -L 2080:localhost:2080 -L 8050:localhost:8050 -L 4141:localhost:4141
+
+scp -r -i "kp-scd-warehousing-mhs.pem" docker_exp ec2-user@ec2-54-205-190-33.compute-1.amazonaws.com:/home/ec2-user/docker_exp
+
+
+2081:localhost:2041 --> 2081 is port par data ayega 2041 and is port se bhar access hoga (ec2 pe se port bhar kis port par dijaegi)
+
+54-205-190-33 this is the ip address and it is a public ip address for ec2 jab bhi ham ec2 
+
+create the terminal and we connect our vs with ec2 through this command: ssh -i "kp-scd-warehousing-mhs.pem" ec2-user@ec2-54-205-190-33.compute-1.amazonaws.com
+
+create the second terminal and we write this command for port forwarding: ssh -i "kp-scd-warehousing-mhs.pem" ec2-user@ec2-54-205-190-33.compute-1.amazonaws.com -L 2081:localhost:2041 -L 4888:localhost:4888 -L 2080:localhost:2080 -L 8050:localhost:8050 -L 4141:localhost:4141 (it will change the port and connect to )
+
+
+sudo yum update -y
+sudo yum install docker
+sudo yum install -y libxcrypt-compat
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo gpasswd -a $USER docker
+newgrp docker
+sudo systemctl start docker
+sudo systemctl stop docker
+
+>> local
+
+zookepper nifi ke sath chalti hai bina zookeeper ke nifi nhi chalta
+
+vi docker-compose.yaml
+to go to insert mode press i then insert
+esc
+shift:
+wq
