@@ -6,7 +6,8 @@ This project implements a real-time data pipeline for continuous data ingestion 
 
 ### Architecture
 
-![architecture-diagram](./notes/images/scd-archiecture.drawio.png)
+<img width="2085" height="659" alt="image" src="https://github.com/user-attachments/assets/99569211-93f5-4944-b547-55307e6a6660" />
+
 
 ### Tech Stack
 
